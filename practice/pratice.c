@@ -303,6 +303,59 @@
 
 // *   *
 //  * *
+
+#include <stdio.h>
+
+void main() {
+    
+    //create a bunch of variables 
+    int seats = 0;
+    int stop = 0;
+    int passengers = 0;
+    int max = 0;
+    int exceeds = 0;
+
+    //scan and store the bus seats and stop
+    scanf("%d %d" , &seats, &stop);
+
+    //loop at stop iteration
+    for (int BusStop = 1; BusStop <= stop; BusStop ++){
+         
+        //create a variable that holds the amount of passenger who get in and get out of the bus
+        int out , in;
+        printf("at bus stop : %d\n" , BusStop);
+        printf("passenger out and in : ");
+
+        //check if the value is positive or not
+        while (scanf("%d %d" , &out , &in))
+        {
+            if (out >= 0 && in >= 0) {break;}
+            printf("please input a positive number\n");
+        }
+
+        //do the math
+        passengers -= out;
+        passengers += in;
+
+        //check
+        //if "seats" > "max" if yes then set max to equa to the amount of seats (or passengers)
+        if (passengers > max) {max = passengers;}
+
+        //check 
+        //if theres no value inside exceeds and the number of passengers is exceeds or not 
+        //if yes then set exceeds to equal to bustop
+        if (!exceeds && passengers > seats) {exceeds = BusStop;}
+        
+    }
+
+    //if exceeds has value then print out
+    if (exceeds) {printf("passenger exceeds at bus stop %d\n" , exceeds);}
+
+    printf("Final passenger is : %d\n" , passengers);
+    printf("Max passenger is : %d\n" , max);
+    
+}
 //   *
 //  * *
+
 // *   *
