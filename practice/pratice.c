@@ -355,7 +355,23 @@ void main() {
     printf("Max passenger is : %d\n" , max);
     
 }
+
+10  4
+0 8
+2 7
+10 0
+0 3
+       
+Output:
+at bus stop : 1
+passenger out and in : at bus stop : 2
+passenger out and in : at bus stop : 3
+passenger out and in : at bus stop : 4
+passenger out and in : passenger exceeds at bus stop 2
+Final passenger is : 6
+Max passenger is : 13
 //   *
 //  * *
 
 // *   *
+
